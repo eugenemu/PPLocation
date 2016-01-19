@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import SwiftyJSON
 
 class Connection {
     class var sharedInstance: Connection {
@@ -40,7 +41,12 @@ class Connection {
     
     func receiveFromServer() {
         socket?.on("giveLocations") { data, ack in
-            print(data)
+            let json = JSON(data)
+            
+            for var i = 0; i < json[0].count; i++ {
+                print(json[0][0]["name"])
+                print(json[0][0]["location"])
+            }
         }
     }
     

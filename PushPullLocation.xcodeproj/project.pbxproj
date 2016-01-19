@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CF6B11C1C4EE40300756D41 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF6B11B1C4EE40300756D41 /* SwiftyJSON.swift */; };
 		E73E7CE21C4DC38500E02C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E7CE11C4DC38500E02C65 /* AppDelegate.swift */; };
 		E73E7CE41C4DC38500E02C65 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E7CE31C4DC38500E02C65 /* MapViewController.swift */; };
 		E73E7CE71C4DC38500E02C65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73E7CE51C4DC38500E02C65 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8CF6B11B1C4EE40300756D41 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../SwiftyJSON.swift; sourceTree = "<group>"; };
 		E73E7CDE1C4DC38500E02C65 /* PushPullLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushPullLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E73E7CE11C4DC38500E02C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E73E7CE31C4DC38500E02C65 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		E73E7CE01C4DC38500E02C65 /* PushPullLocation */ = {
 			isa = PBXGroup;
 			children = (
+				8CF6B11B1C4EE40300756D41 /* SwiftyJSON.swift */,
 				E73E7CF91C4EC7C700E02C65 /* SocketIO */,
 				E73E7CE11C4DC38500E02C65 /* AppDelegate.swift */,
 				E73E7CF51C4DC8DA00E02C65 /* UserViewController.swift */,
@@ -237,6 +240,7 @@
 				E73E7D111C4EC7D600E02C65 /* SocketClientSpec.swift in Sources */,
 				E73E7CF61C4DC8DA00E02C65 /* UserViewController.swift in Sources */,
 				E73E7D1A1C4EC7D600E02C65 /* SocketIOClientStatus.swift in Sources */,
+				8CF6B11C1C4EE40300756D41 /* SwiftyJSON.swift in Sources */,
 				E73E7D121C4EC7D600E02C65 /* SocketEngine.swift in Sources */,
 				E73E7D1B1C4EC7D600E02C65 /* SocketLogger.swift in Sources */,
 				E73E7CE21C4DC38500E02C65 /* AppDelegate.swift in Sources */,
