@@ -16,14 +16,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBOutlet weak var mapView: MKMapView!
     
-//    @IBAction func refreshButton(sender: UIBarButtonItem) {
-//        let lat = locationManager.location?.coordinate.latitude
-//        let long = locationManager.location?.coordinate.longitude
-//        print("\(lat) \(long)")
-//    }
+    
+    @IBAction func pullLocation(sender: UIBarButtonItem) {
+        Connection.sharedInstance.retrieveFromServer()
+        Connection.sharedInstance.receiveFromServer()
+    }
+    
     
     @IBAction func yourLocation(sender: UIBarButtonItem) {
-        
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = MKUserTrackingMode.Follow
     }
     
     @IBAction func pushLocation(sender: UIBarButtonItem) {
