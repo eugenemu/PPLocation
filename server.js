@@ -27,7 +27,12 @@ io.sockets.on("connection", function(socket) {
     })
 
     socket.on("pullLocation", function() {
-        socket.emit("giveLocations", users);
+        var data = [];
+        for (user in users) {
+            data.push(users[user]);
+        }
+        console.log(data);
+        socket.emit("giveLocations", data);
     })
 
     socket.on("disconnect", function() {

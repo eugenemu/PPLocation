@@ -50,6 +50,17 @@ class Connection {
         }
     }
     
+    func parseJSON(inputData: NSData) -> NSArray?
+    {
+        var arrOfObjects: NSArray?
+        do {
+            arrOfObjects = try NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+        } catch let error as NSError {
+            print(error)
+        }
+        return arrOfObjects
+    }
+    
     
 }
 
