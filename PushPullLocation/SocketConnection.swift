@@ -19,7 +19,7 @@ class Connection {
     var socket: SocketIOClient?
     
     func connectToServer() {
-        socket = SocketIOClient(socketURL: "http://localhost:5000")
+        socket = SocketIOClient(socketURL: "http://Eugenes-MacBook-Pro.local:5000")
         socket?.connect()
         socket?.on("connect") { data, ack in
             print("Connected to Server")
