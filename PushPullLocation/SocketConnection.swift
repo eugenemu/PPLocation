@@ -43,13 +43,18 @@ class Connection {
     }
     
     func receiveFromServer() {
+        
+        
         socket?.on("giveLocations") { data, ack in
+            
+            self.annotations.removeAll()
+            
             let json = JSON(data)
             
             for var i = 0; i < json[0].count; i++ {
-                let lat = json[0][0]["location"][0].double
-                let lon = json[0][0]["location"][1].double
-                let name = json[0][0]["name"].string
+                let lat = json[0][i]["location"][0].double
+                let lon = json[0][i]["location"][1].double
+                let name = json[0][i]["name"].string
                 let location = CLLocationCoordinate2DMake(lat!, lon!)
                 
                 let annotation = MKPointAnnotation()
@@ -57,6 +62,8 @@ class Connection {
                 annotation.coordinate = location
                 
                 self.annotations.append(annotation)
+                
+                print(name)
 //                print(json[0][0]["name"])
 //                print(json[0][0]["location"])
             }
