@@ -34,6 +34,17 @@ class Connection {
         socket?.emit("locationEntered", location)
     }
     
+    func retrieveFromServer() {
+        socket?.emit("pullLocation")
+    }
+    
+    func receiveFromServer() {
+        socket?.on("giveLocations") { data, ack in
+            print(data)
+        }
+    }
+    
+    
 }
 
 

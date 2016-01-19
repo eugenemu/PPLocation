@@ -22,9 +22,12 @@ io.sockets.on("connection", function(socket) {
     })
     
     socket.on("locationEntered", function(data) {
-        console.log(data);
         users[socket.id].location = data;
         console.log(users);
+    })
+
+    socket.on("pullLocation", function() {
+        socket.emit("giveLocations", users);
     })
 
     socket.on("disconnect", function() {

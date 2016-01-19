@@ -45,7 +45,11 @@
                             </barButtonItem>
                             <barButtonItem id="PEM-dj-Rtl"/>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="Pull" id="Pq9-t7-5SV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Pull" id="Pq9-t7-5SV">
+                            <connections>
+                                <action selector="pullLocation:" destination="BYZ-38-t0r" id="aFH-lp-JGP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="hh2-dB-O6C" id="7V1-me-Wdm"/>
