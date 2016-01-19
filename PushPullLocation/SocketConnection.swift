@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MapKit
 //import SwiftyJSON
 
 class Connection {
+    var annotations = [MKAnnotation]()
+    
     class var sharedInstance: Connection {
         struct Static {
             static let instance: Connection = Connection()
@@ -44,8 +47,18 @@ class Connection {
             let json = JSON(data)
             
             for var i = 0; i < json[0].count; i++ {
-                print(json[0][0]["name"])
-                print(json[0][0]["location"])
+                let lat = json[0][0]["location"][0].double
+                let lon = json[0][0]["location"][1].double
+                let name = json[0][0]["name"].string
+                let location = CLLocationCoordinate2DMake(lat!, lon!)
+                
+                let annotation = MKPointAnnotation()
+                annotation.title = name
+                annotation.coordinate = location
+                
+                self.annotations.append(annotation)
+//                print(json[0][0]["name"])
+//                print(json[0][0]["location"])
             }
         }
     }
