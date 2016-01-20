@@ -20,6 +20,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBAction func pullLocation(sender: UIBarButtonItem) {
         Connection.sharedInstance.retrieveFromServer()
         Connection.sharedInstance.receiveFromServer()
+        mapView.addAnnotations(Connection.sharedInstance.annotations)
     }
     
     
